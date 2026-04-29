@@ -11,7 +11,7 @@
     - [Types of processor](./paper_1/1.1/1.1.2_types_of_processor.md)
     - [Input, output and storage](./paper_1/1.1/1.1.3_input_output_and_storage.md)
 - [Software and software development](./paper_1/1.2_software_and_software_development.md)
-    - [Memory and storage technologies](./paper_1/1.2/1.2.1_systems_software.md)
+    - [Systems Software](./paper_1/1.2/1.2.1_systems_software.md)
     - [Applications generation](./paper_1/1.2/1.2.2_applications_generation.md)
     - [Software development](./paper_1/1.2/1.2.3_software_development.md)
     - [Types of Programming Language](./paper_1/1.2/1.2.4_types_of_programming_language.md)

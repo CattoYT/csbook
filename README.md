@@ -14,3 +14,5 @@ cd csbook
 cargo install mdbook
 mdbook serve 
 ```
+
+If you see an error relating to no-html-extension in book.toml, please check [this issue](https://github.com/rust-lang/mdBook/pull/3047) for why. I also [have a fork with a built version of mdbook with those patches](https://github.com/CattoYT/mdBook/releases/tag/a)

@@ -9,4 +9,4 @@ mathjax-support = true
 
 # https://github.com/jhult/mdBook/tree/feat/no-html-ext
 # SPECIFIC TO THIS FORK
-no-html-extension=true
+# no-html-extension=true

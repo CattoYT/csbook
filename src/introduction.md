@@ -1,10 +1,10 @@
 # Introduction
 ![GitHub last commit](https://img.shields.io/github/last-commit/cattoyt/csbook?path=src%2Fintroduction.md&label=Last%20updated)
 
-> [!IMPORTANT]
-> Welcome to the Computer Science Open Evening!  
-> This website is a portion of the REAL notes that I have been creating, from Year 12 to now. Feel free to explore the website, 
-
+<!-- > [!IMPORTANT] -->
+<!-- > Welcome to the Computer Science Open Evening!   -->
+<!-- > This website is a portion of the REAL notes that I have been creating, from Year 12 to now. Feel free to explore the website,  -->
+<!---->
 
 
 Welcome to my unofficial textbook for OCR A Level Computer Science (h446).  

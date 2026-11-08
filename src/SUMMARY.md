@@ -33,6 +33,8 @@
 
 # Paper 2 — Algorithms and programming
 
+- [Problem Solving and Programming](./paper_2/2.2_problem_solving_and_programming.md)
+  - [Programming Techniques](./paper_2/2.2/2.2.1_programming_techniques.md)
 - [Algorithms](./paper_2/2.3_Algorithms.md)
     - [Search Algorithms](./paper_2/2.3/search_algorithms.md)
     - [Sorting Algorithms](./paper_2/2.3/sorting_algorithms.md)

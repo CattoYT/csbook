@@ -24,7 +24,7 @@ It may contain changes that are not present on the live/stable version at [book.
 > If there is a mistake, or you want to contribute a page, please send a pull request on [Github!](https://github.com/cattoyt/csbook)
 
 
-The last update was:  
-[![GitHub last commit](https://img.shields.io/github/last-commit/cattoyt/csbook)](https://github.com/cattoyt/csbook)
+<!--The last update was:  
+[![GitHub last commit](https://img.shields.io/github/last-commit/cattoyt/csbook)](https://github.com/cattoyt/csbook)-->
 
 See changelog [here](https://github.com/CattoYT/csbook/blob/main/src/CHANGELOG.md)

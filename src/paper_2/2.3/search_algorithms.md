@@ -1,8 +1,6 @@
 # Search Algorithms
 ![GitHub last commit](https://img.shields.io/github/last-commit/cattoyt/csbook?path=src%2Fpaper_2%2F2.3%2Fsearch_algorithms.md&label=Last%20updated)
 
-> [!NOTE]
-> 🚧 This page is currently being worked on. Please check back soon.
 ## Linear Search
 - Linear search is a simple search algorithm that checks every element in a list until the desired element is found or the list ends.
 - The time complexity of linear search is O(n), where n is the number of elements in the list. This means that in the worst case, the algorithm will have to check every element in the list before finding the desired element or determining that it is not present.

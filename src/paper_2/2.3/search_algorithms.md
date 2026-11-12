@@ -1,8 +1,6 @@
 # Search Algorithms
 ![GitHub last commit](https://img.shields.io/github/last-commit/cattoyt/csbook?path=src%2Fpaper_2%2F2.3%2Fsearch_algorithms.md&label=Last%20updated)
 
-> [!NOTE]
-> 🚧 This page is currently being worked on. Please check back soon.
 ## Linear Search
 - Linear search is a simple search algorithm that checks every element in a list until the desired element is found or the list ends.
 - The time complexity of linear search is O(n), where n is the number of elements in the list. This means that in the worst case, the algorithm will have to check every element in the list before finding the desired element or determining that it is not present.
@@ -34,7 +32,7 @@ else:
 
 ## Binary Search
 - Binary search is a _divide and conquer_ search algorithm that repeatedly divides the search interval in half to find the target value. 
-- The time complexity of binary search is O(log n), where n is the number of elements in the list. This means that the algorithm can quickly narrow down the search space, making it much faster than linear search for large lists.
+- The time complexity of binary search is O(\\(log n)\\), where n is the number of elements in the list. This means that the algorithm can quickly narrow down the search space, making it much faster than linear search for large lists.
 - Binary search requires the list to be sorted before it can be applied. If the list is not sorted, the algorithm will not work correctly.
 
 Here is an example implementation in python:

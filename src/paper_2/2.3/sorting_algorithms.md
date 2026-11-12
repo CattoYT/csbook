@@ -2,7 +2,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/cattoyt/csbook?path=src%2Fpaper_2%2F2.3%2Fsorting_algorithms.md&label=Last%20updated)
 
 ## Bubble sort
-The bubble sort is a simple O(n^2) algorithm that sorts a dataset by iterating through the data with two pointers, switching the values where necessary.
+The bubble sort is a simple O(\\(n^2\\)) algorithm that sorts a dataset by iterating through the data with two pointers, switching the values where necessary.
 
 ### Example
 Consider the following array:  
@@ -107,6 +107,56 @@ def insertion_sort(arr):
             arr[j + 1] = arr[j]
             j -= 1
         arr[j + 1] = key
+    
+    return arr
+```
+
+## Merge Sort
+Merge sort is a **divide and conquer** algorithm that has an average time complexity of O(\\(nlogn\\)). It works by recursively splitting the dataset into halves until each sub-array contains a single element, and then merging those sub-arrays back together in sorted order.
+
+### Example
+Suppose you have the list `[5, 3, 8, 4, 2]`.
+1. Split the list into two halves: `[5, 3]` and `[8, 4, 2]`.
+2. Recursively split each half until you have single-element lists: `[5]`, `[3]`, `[8]`, `[4]`, `[2]`.
+3. Merge the single-element lists back together in sorted order:
+   - Merge `[5]` and `[3]` to get `[3, 5]`.
+   - Merge `[8]` and `[4] to get `[4, 8]`.
+   - Merge `[4, 8]` and `[2]` to get `[2, 4, 8]`.
+4. Finally, merge `[3, 5]` and `[2, 4, 8]` to get the fully sorted list `[2, 3, 4, 5, 8]`.
+
+```python
+def merge_sort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        left_half = arr[:mid]
+        right_half = arr[mid:]
+    
+        # Recursively split and sort both halves
+        merge_sort(left_half)
+        merge_sort(right_half)
+    
+        i = j = k = 0
+    
+        # Merge the two halves
+        while i < len(left_half) and j < len(right_half):
+            if left_half[i] < right_half[j]:
+                arr[k] = left_half[i]
+                i += 1
+            else:
+                arr[k] = right_half[j]
+                j += 1
+            k += 1
+    
+        # Check for any leftover elements
+        while i < len(left_half):
+            arr[k] = left_half[i]
+            i += 1
+            k += 1
+    
+        while j < len(right_half):
+            arr[k] = right_half[j]
+            j += 1
+            k += 1
     
     return arr
 ```

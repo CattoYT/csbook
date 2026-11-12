@@ -32,7 +32,7 @@ else:
 
 ## Binary Search
 - Binary search is a _divide and conquer_ search algorithm that repeatedly divides the search interval in half to find the target value. 
-- The time complexity of binary search is O(log n), where n is the number of elements in the list. This means that the algorithm can quickly narrow down the search space, making it much faster than linear search for large lists.
+- The time complexity of binary search is O(\\(log n)\\), where n is the number of elements in the list. This means that the algorithm can quickly narrow down the search space, making it much faster than linear search for large lists.
 - Binary search requires the list to be sorted before it can be applied. If the list is not sorted, the algorithm will not work correctly.
 
 Here is an example implementation in python:

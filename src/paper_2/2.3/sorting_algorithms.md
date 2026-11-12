@@ -125,40 +125,59 @@ Suppose you have the list `[5, 3, 8, 4, 2]`.
 4. Finally, merge `[3, 5]` and `[2, 4, 8]` to get the fully sorted list `[2, 3, 4, 5, 8]`.
 
 ```python
-def merge_sort(arr):
-    if len(arr) > 1:
-        mid = len(arr) // 2
-        left_half = arr[:mid]
-        right_half = arr[mid:]
-    
-        # Recursively split and sort both halves
-        merge_sort(left_half)
-        merge_sort(right_half)
-    
-        i = j = k = 0
-    
-        # Merge the two halves
-        while i < len(left_half) and j < len(right_half):
-            if left_half[i] < right_half[j]:
-                arr[k] = left_half[i]
-                i += 1
-            else:
-                arr[k] = right_half[j]
-                j += 1
-            k += 1
-    
-        # Check for any leftover elements
-        while i < len(left_half):
-            arr[k] = left_half[i]
-            i += 1
-            k += 1
-    
-        while j < len(right_half):
-            arr[k] = right_half[j]
-            j += 1
-            k += 1
-    
-    return arr
+def merge_sort(array):
+
+    # Base case: if the array has 0 or 1 elements,
+    # it is already sorted, so return it.
+    if len(array) <= 1:
+        return array
+
+    # Find the middle position of the array
+    middle = len(array) // 2
+
+    # Split the array into two halves
+    left_half = array[:middle]
+    right_half = array[middle:]
+
+    # Recursively sort each half
+    left_half = merge_sort(left_half)
+    right_half = merge_sort(right_half)
+
+    # Merge the two sorted halves together
+    return merge(left_half, right_half)
+
+
+def merge(left, right):
+    # Create an empty list to store the sorted values
+    result = []
+
+    # Continue while both lists contain elements
+    while len(left) > 0 and len(right) > 0:
+
+        # Compare the first element of each list
+        if left[0] <= right[0]:
+
+            # Add the smaller element to the result
+            result.append(left[0])
+
+            # Remove the element that has been added
+            left.pop(0)
+
+        else:
+            # Add the smaller element from the right list
+            result.append(right[0])
+
+            # Remove the element that has been added
+            right.pop(0)
+
+    # Add any remaining elements from the left list
+    result.extend(left)
+
+    # Add any remaining elements from the right list
+    result.extend(right)
+
+    # Return the fully sorted list
+    return result
 ```
 
 

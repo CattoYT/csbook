@@ -16,7 +16,7 @@ If you are taking AS-Level rather than A-Level, refer to the specification for w
 <!--A live dev version can be seen on [dev.kyuun.tech](https://dev.kyuun.tech), which is only live whenever I have my editor open and I am actively writing parts of the book. 
 It may contain changes that are not present on the live/stable version at [book.kyuun.tech](https://book.kyuun.tech)!-->
 
-<!--> [!IMPORTANT]  
+<!-- [!IMPORTANT]  
 > Please note that this book is under HEAVY construction since I'm still going through the spec myself
 > If you are reading this on Open Evening, welcome!
 > A large portion of the book will also need to be refactored and restructured.

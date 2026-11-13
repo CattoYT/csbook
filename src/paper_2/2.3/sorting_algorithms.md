@@ -184,8 +184,63 @@ def merge(left, right):
 ## Quicksort
 Quicksort is a **divide and conquer** algorithm that has an average time complexity of O(\\(nlogn\\)). It works by choosing a 'pivot' element from the dataset, then moving it to the , and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot.  
 
-The sub-arrays are then sorted recursively.
+The basic steps are:
+1. Pick an element from the array as a pivot.
+2. Partition the array into two sub-arrays: elements less than the pivot and elements greater than the pivot.
+3. At this point, only the pivot will be in the correct position. So, we recursively apply the same logic to the left and right sub-arrays, and do this again until the whole list is sorted.
 
->[!NOTE]
-> [This link](https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/visualize/) may be helpful. I will not provide an example, since I don't want this book to be impossibly big.
-> The next section will rely on the visualiser with array size 10. Use those settings to follow along.
+In the best case, the data should split evenly at each stage, for maximum efficiency. In the worst case, the pivot is always the smallest or largest element, which results in the benefit of divide and conquer being lost and a time complexity of O(\\(n^2\\)).
+
+Given that the array is not sorted, picking an optimal pivot is quite challenging. Approaches taken are:
+- Take the first or last element
+- Take the middle element
+- Take a random element
+- Take the median of the first, middle, and last elements
+- Median of medians: take the median of several median sets taken from within the array: this is the most efficient when sorting, but also takes more processing overhead, which detracts from the overall efficiency of the algorithm.
+
+### Example
+Suppose you have the list `[5, 3, 8, 4, 2]` and you choose `4` as the pivot.
+1. Partition the list into two sub-arrays: `[3, 2]` (elements less than `4`) and `[5, 8]` (elements greater than `4`).
+2. Now, recursively apply the same logic to the left sub-array `[3, 2]` and the right sub-array `[5, 8]`.
+3. For the left sub-array `[3, 2]`, choose `2` as the pivot. Partition it into `[ ]` (elements less than `2`) and `[3]` (elements greater than `2`). Now, the left sub-array is sorted as `[2, 3]`.
+4. For the right sub-array `[5, 8]`, choose `5` as the pivot. Partition it into `[ ]` (elements less than `5`) and `[8]` (elements greater than `5`). Now, the right sub-array is sorted as `[5, 8]`.
+5. Finally, combine the sorted left sub-array `[2, 3]`, the pivot `4`, and the sorted right sub-array `[5, 8]` to get the fully sorted list `[2, 3, 4, 5, 8]`.
+
+When partitioning, you can use pointers. The pointers start at the left and right ends of the array, moving towards each other. When the left pointer finds an element greater than the pivot and the right pointer finds an element less than the pivot, they are swapped. This continues until the pointers cross, at which point the partitioning is complete.
+
+Starting with `[5, 3, 8, 4, 2]` and pivot `4`:
+1. left stops at 5; right stops at 2. Swap → [2, 3, 8, 4, 5]
+2. left stops at 8; right stops at 4. Swap → [2, 3, 4, 8, 5]
+3. The pointers have crossed, so this partition is done.
+
+
+```python
+def quicksort(items):
+    def partition(left, right):
+        pivot = items[(left + right) // 2]
+        i, j = left, right
+
+        while i <= j:
+            while items[i] < pivot:
+                i += 1
+            while items[j] > pivot:
+                j -= 1
+
+            if i <= j:
+                items[i], items[j] = items[j], items[i]
+                i += 1
+                j -= 1
+
+        return i
+
+    def sort(left, right):
+        if left >= right:
+            return
+
+        split = partition(left, right)
+        sort(left, split - 1)
+        sort(split, right)
+
+    sort(0, len(items) - 1)
+    return items
+```

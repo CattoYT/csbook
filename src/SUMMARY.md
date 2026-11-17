@@ -36,6 +36,7 @@
 
 - [Computational thinking](./paper_2/2.1_computational_thinking.md)
     - [Abstraction](./paper_2/2.1/2.1.1_abstraction.md)
+    - [Thinking Ahead](./paper_2/2.1/2.1.2_thinking_ahead.md)
 - [Problem Solving and Programming](./paper_2/2.2_problem_solving_and_programming.md)
     - [Programming Techniques](./paper_2/2.2/2.2.1_programming_techniques.md)
 - [Algorithms](./paper_2/2.3_Algorithms.md)

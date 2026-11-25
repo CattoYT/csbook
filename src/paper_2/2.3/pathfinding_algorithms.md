@@ -24,3 +24,9 @@
 > [!NOTE]
 > [This video](https://www.youtube.com/watch?v=GazC3A4OQTE) may be worth a watch if a text-based explanation is confusing.
 
+## A* Algorithm
+- The **A\* algorithm** is a popular pathfinding and graph traversal algorithm that is used to find the shortest path between nodes in a graph. It is an improvement over Dijkstra's algorithm, as it uses a heuristic function to **estimate the cost of reaching the goal node from the current node**. This allows A* to prioritise nodes that are more likely to lead to the goal, resulting in faster search times.
+- For example, if you were going from Manchester to Liverpool, the fastest route is probably not via Birmingham, so the A* algorithm would prioritise nodes that are closer to Liverpool, rather than exploring all possible paths equally.
+- When calculating the distance between two nodes using the A* algorithm, the approximate cost is added onto the actual cost, which is then used to determine which node is visited next.
+- Nodes with very high total costs are ignored to make the algorithm faster.
+- When working in an exam, extra columns for heuristic values and total costs should be added to the table.
